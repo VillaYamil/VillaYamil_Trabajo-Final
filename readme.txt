@@ -1,30 +1,32 @@
-# Instrucciones de Uso del Sistema de Toma de Asistencias
+README - Sistema de Toma de Asistencias
 
-## 1. Acceso al Sistema (Login)
+Este sistema te permite gestionar las asistencias de los alumnos, registrar notas, ver el estado de los alumnos y gestionar las materias. A continuación te explico cómo usar las funciones principales:
 
-1. Abre la página de login.
-2. Ingresa las siguientes credenciales para acceder al sistema:
+1. **Acceso al Login**
+   - Inicia sesión con las siguientes credenciales:
+     - **Nombre de usuario**: Yamil
+     - **Contraseña**: 12345
+   - Después de iniciar sesión, serás redirigido a la página principal.
 
-    - **Nombre de usuario**: Yamil
-    - **Contraseña**: 12345
+2. **Alta de Asistencia**
+   - En esta sección puedes registrar la asistencia de los alumnos a las materias.
+   - Se debe seleccionar la materia y el alumno, luego marcar si está presente o ausente.
+   - El registro se guarda en la base de datos para que puedas consultar más tarde.
 
-3. Haz clic en "Iniciar sesión" para acceder al sistema.
+3. **Muestra Asistencia Materia**
+   - En esta página puedes ver la asistencia de los alumnos por materia.
+   - Seleccionas la materia y el sistema muestra la lista de alumnos con sus respectivas asistencias (presente, ausente) y las fechas de cada clase.
 
-## 2. Instrucciones de Uso
+4. **Formulario de Notas**
+   - En este formulario puedes asignar tres notas a cada alumno para las materias.
+   - Puedes ver las materias disponibles y seleccionar un alumno para ingresar sus notas.
+   - Las notas se almacenan para su posterior consulta.
 
-### Página de Asistencia
+5. **Ver Estado Alumno**
+   - Aquí podrás ver el estado de los alumnos según su asistencia y notas.
+   - El sistema calcula un estado de aprobado, regular o desaprobado basado en las asistencias y notas registradas.
 
-1. El sistema te permitirá ver y gestionar las asistencias de los alumnos.
-2. Para agregar una asistencia, selecciona una materia y un alumno.
-3. Después de ingresar la asistencia, esta se registrará en la base de datos.
-4. Para ver las asistencias de una materia en particular, selecciona la materia en el formulario correspondiente.
-
-### Página de Notas
-
-1. En esta página, podrás asignar hasta tres notas a cada alumno.
-2. Después de ingresar las notas, el sistema calculará si el alumno está aprobado o desaprobado.
-
-### Mensaje de Cumpleaños
-
-1. Si algún alumno cumple años el día de hoy, el sistema mostrará un mensaje especial en la página de asistencias.
-2. Asegúrate de que la fecha de nacimiento esté correctamente registrada en el sistema.
+6. **ABM de Materia**
+   - Desde esta sección puedes gestionar las materias.
+   - Puedes **agregar** nuevas materias, **editar** el nombre de una materia existente, o **eliminar** una materia.
+   - Las materias son esenciales para la asignación de notas y asistencias a los alumnos.
