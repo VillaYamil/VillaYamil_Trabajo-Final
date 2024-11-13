@@ -30,3 +30,22 @@ Este sistema te permite gestionar las asistencias de los alumnos, registrar nota
    - Desde esta sección puedes gestionar las materias.
    - Puedes **agregar** nuevas materias, **editar** el nombre de una materia existente, o **eliminar** una materia.
    - Las materias son esenciales para la asignación de notas y asistencias a los alumnos.
+
+### Creación y Configuración de la Base de Datos
+
+1. **Crear la Base de Datos**
+   - Primero, abre **phpMyAdmin** en tu navegador.
+   - Crea una nueva base de datos llamada `tp_asistencias_v3` (o el nombre que desees).
+   - Usa la opción "Crear base de datos" y asegúrate de elegir **utf8_general_ci** como cotejamiento (collation).
+
+2. **Importar la Estructura de la Base de Datos**
+   - Una vez que hayas creado la base de datos, deberás importar las tablas necesarias.
+   - Las tablas esenciales para este sistema incluyen:
+     - `alumno`: Contiene los datos de los alumnos.
+     - `profesor`: Contiene los datos de los profesores.
+     - `materia`: Contiene los datos de las materias.
+     - `asistencia`: Registra las asistencias de los alumnos.
+     - `alumno_materia`: Relaciona alumnos con materias.
+     - `profesor_materia`: Relaciona profesores con materias.
+   - Se debe precionar en seleccionar archivo y nuevamente seleccionar el archivo tp_asistencias_v4.sql y por ultimo presionar Importar.
+
