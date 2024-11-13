@@ -25,13 +25,13 @@ $alumnos = $alumno->getAll();
         <label for="dni">DNI del alumno:</label>
         <input type="text" name="dni" id="dni" required>
         <label for="fecha_nacimiento">Fecha de nacimiento del alumno:</label>
-        <input type="text" name="fecha_nacimiento" id="fecha_nacimiento" required>
+        <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" required>
 
-        <label for="dni">Selecciona un alumno para actualizar o eliminar:</label>
-        <select name="dni" id="dni">
+        <label for="dni_existente">Selecciona un alumno para actualizar o eliminar:</label>
+        <select name="dni_existente" id="dni_existente">
             <option value="">-- Selecciona --</option>
             <?php foreach ($alumnos as $alm): ?>
-                <option value="<?= $mat['dni'] ?>">
+                <option value="<?= $alm['dni'] ?>">
                     <?= $alm['dni'] . ' - ' . htmlspecialchars($alm['nombre']) ?>
                 </option>
             <?php endforeach; ?>

@@ -1,27 +1,22 @@
 <?php
 
  require_once 'conexion.php';
+ 
+$fechaHoy = date('n-j');
 
- $fechaHoy = date('n-j');
-//var_dump($fechaHoy);
- // Obtener el nombre de la materia seleccionada
-$sqlCumple = "SELECT nombre,apellido FROM alumno WHERE fecha_nacimiento = :fechaHoy";
-
-//var_dump($sqlCumple);
+// Consulta para verificar si hay algún alumno que cumpla años hoy
+$sqlCumple = "SELECT nombre, apellido FROM alumno WHERE DATE_FORMAT(fecha_nacimiento, '%c-%e') = :fechaHoy";
 
 $stmtCumple = $conn->prepare($sqlCumple);
-
 $stmtCumple->execute([':fechaHoy' => $fechaHoy]);
-//var_dump($stmtCumple);
-$alumnoCumple = $stmtCumple -> fetchAll(PDO::FETCH_ASSOC);
 
-//var_dump($alumnoCumple);
-if ($alumnoCumple){
+// Obtén los alumnos que cumplen años hoy
+$alumnoCumple = $stmtCumple->fetchAll(PDO::FETCH_ASSOC);
 
-    foreach ($alumnoCumple as $alumno){
-        echo "<h2>Hoy es el cumpleaños de: ".($alumno['nombre']." ".$alumno['apellido'])."</h2>";
+if ($alumnoCumple) {
+    foreach ($alumnoCumple as $alumno) {
+        echo "<h2>Hoy es el cumpleaños de: " . htmlspecialchars($alumno['nombre'] . " " . $alumno['apellido']) . "</h2>";
     }
-
 }
 ?>
 
@@ -42,7 +37,7 @@ if ($alumnoCumple){
         <a href="notas/formulario_notas.php">Formulario de Notas</a>
         <a href="notas/ver_estado.php">Ver Estado Alumno</a>
         <a href="materia/form_ABM_materia.php">ABM Materia</a>
-        
+        <a href="alumnos/form_ABM_alumno.php">ABM Alumno</a>
     </div>
 </body>
 </html>
