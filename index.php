@@ -101,7 +101,7 @@
     </div>
     <div>
         <label for="password">Contraseña
-            <input type="text" name="password" id="password">
+            <input type="password" name="password" id="password">
         </label>
     </div>
 
