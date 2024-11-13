@@ -1,38 +1,3 @@
-<?php
-// require_once 'Materia.php';
-
-// if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-//     $nombre = $_POST['nombre'];
-
-
-// $materia = new Materia ();
-
-
-// $materia->create();
-
-// if (create()) {
-//     echo "Materia creada";
-// }
-// }
-
-// 
-// require_once '../conexion.php';
-// require_once 'Materia.php';
-
-// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-//     $nombre = $_POST['nombre'];
-
-//     // Crear una instancia de Materia con la conexión
-//     $materia = new Materia($conn);
-//     $materia->nombre = $nombre;
-
-//     if ($materia->create()) {
-//         echo "Materia creada";
-//     } else {
-//         echo "Error al crear la materia";
-//     }
-// }
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -59,14 +24,6 @@
     $id = $_POST['id'] ?? null;
     $nombre = $_POST['nombre'] ?? '';
 
-    // if ($action === 'create') {
-    //     // Acción de creación
-    //     $materia->nombre = $nombre;
-    //     if ($materia->create()) {
-    //         echo "<div class='success'>Materia creada con éxito.</div>";
-    //     } else {
-    //         echo "<div class='error'>Error al crear la materia.</div>";
-    //     }
     if ($action === 'create') {
         // Verificar si la materia ya existe
         if ($materia->exists($nombre)) {
@@ -116,30 +73,6 @@
             }
         }
     }
-
-    // } elseif ($action === 'delete' && $id) {
-    //     // Acción de eliminación
-    //     if ($_GET['action'] ?? 'delete_confirmed' && $id) {
-    //         // Confirmación de eliminación
-    //         if ($materia->delete($id)) {
-    //             echo "<div class='success'>Materia eliminada correctamente.</div>";
-    //         } else {
-    //             echo "<div class='error'>Ocurrió un error al intentar eliminar la materia.</div>";
-    //         }
-    //     } else if ($id) {
-    //         // Mostrar mensaje de confirmación si tiene asistencias asociadas
-    //         if ($materia->hasAssociatedAsistencias($id)) {
-    //             echo "<div class='error'>Esta materia tiene registros de asistencia asociados. ¿Deseas eliminarla de todas formas?</div>";
-    //             echo "<a href='ABM_materia.php?action=delete_confirmed&id=$id'>Sí, eliminar</a> | ";
-    //             echo "<a href='../opciones.php'>No, regresar</a>";
-    //         } else {
-    //             // Si no tiene asistencias asociadas, eliminar directamente
-    //             $materia->delete($id);
-    //             echo "<div class='success'>Materia eliminada exitosamente.</div>";
-    //         }
-    //     } else {
-    //         echo "<div class='error'>ID de materia no proporcionado.</div>";
-    //     }
     ?>
 
 </div>
