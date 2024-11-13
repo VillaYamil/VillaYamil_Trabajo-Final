@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Obtener el nombre de la materia
     $sqlMateria = "SELECT nombre FROM materia WHERE id = :materia_id";
-    $stmtMateria = $pdo->prepare($sqlMateria);
+    $stmtMateria = $conn->prepare($sqlMateria);
     $stmtMateria->execute([':materia_id' => $materia_id]);
     $materia = $stmtMateria->fetch(PDO::FETCH_ASSOC);
     $materiaNombre = $materia['nombre'];
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Obtener el nombre del alumno
         $sqlAlumno = "SELECT nombre, apellido FROM alumno WHERE id = :alumno_id";
-        $stmtAlumno = $pdo->prepare($sqlAlumno);
+        $stmtAlumno = $conn->prepare($sqlAlumno);
         $stmtAlumno->execute([':alumno_id' => $alumno_id]);
         $alumno = $stmtAlumno->fetch(PDO::FETCH_ASSOC);
         $alumnoNombre = $alumno['nombre'] . " " . $alumno['apellido'];
@@ -58,14 +58,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Verificar si ya existe un registro de asistencia para este alumno, materia y fecha
         $sqlCheck = "SELECT COUNT(*) FROM asistencia 
                      WHERE alumno_id = :alumno_id AND materia_id = :materia_id AND fecha = :fecha";
-        $stmtCheck = $pdo->prepare($sqlCheck);
+        $stmtCheck = $conn->prepare($sqlCheck);
         $stmtCheck->execute([':alumno_id' => $alumno_id, ':materia_id' => $materia_id, ':fecha' => $fecha]);
 
         if ($stmtCheck->fetchColumn() == 0) {
             // Si no existe el registro, insertar la nueva asistencia
             $sqlInsert = "INSERT INTO asistencia (alumno_id, materia_id, fecha, estado)
                           VALUES (:alumno_id, :materia_id, :fecha, :estado)";
-            $stmtInsert = $pdo->prepare($sqlInsert);
+            $stmtInsert = $conn->prepare($sqlInsert);
             $stmtInsert->execute([
                 ':alumno_id' => $alumno_id,
                 ':materia_id' => $materia_id,
