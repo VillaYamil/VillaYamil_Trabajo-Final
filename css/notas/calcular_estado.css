@@ -1,0 +1,63 @@
+/* Estilo general de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo del contenedor */
+.container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Estilos para el estado */
+.estado-error {
+    color: red;
+    font-weight: bold;
+}
+
+.estado-promocionado {
+    color: green;
+    font-weight: bold;
+}
+
+.estado-regulariza {
+    color: orange;
+    font-weight: bold;
+}
+
+.estado-libre {
+    color: #666;
+    font-weight: bold;
+}
+
+/* Detalles de la información */
+.detalles {
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Enlace de vuelta */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

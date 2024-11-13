@@ -1,0 +1,21 @@
+.info {
+    color: #110d0e;  /* Rojo suave */
+    font-weight: normal;
+    background-color: #f8f8f8;  /* Blanco suave */
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #c72c41;  /* Rojo suave para el borde */
+    border-radius: 5px;
+    font-size: 12px;  /* Hacer el texto más pequeño */
+}
+
+.success {
+    color: #110e0f;  /* Rojo suave */
+    font-weight: normal;
+    background-color: #f8f8f8;  /* Blanco suave */
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #110b0c;  /* Rojo suave para el borde */
+    border-radius: 5px;
+    font-size: 12px;  /* Hacer el texto más pequeño */
+}
