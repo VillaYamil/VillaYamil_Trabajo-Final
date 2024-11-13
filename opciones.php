@@ -2,7 +2,7 @@
 
  require_once 'conexion.php';
 
- $fechaHoy = date('j-n');
+ $fechaHoy = date('n-j');
 //var_dump($fechaHoy);
  // Obtener el nombre de la materia seleccionada
 $sqlCumple = "SELECT nombre,apellido FROM alumno WHERE fecha_nacimiento = :fechaHoy";
