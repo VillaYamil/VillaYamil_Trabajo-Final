@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 13-11-2024 a las 01:44:16
+-- Tiempo de generación: 13-11-2024 a las 01:56:58
 -- Versión del servidor: 8.0.30
 -- Versión de PHP: 8.1.10
 
@@ -40,28 +40,28 @@ CREATE TABLE `alumno` (
 --
 
 INSERT INTO `alumno` (`id`, `nombre`, `apellido`, `dni`, `fecha_nacimiento`) VALUES
-(1, 'Valentino', 'Andrade', '35123456', '1935-12-34'),
-(2, 'Lucas', 'Cedres', '34876543', '1934-87-65'),
-(3, 'Facundo', 'Figun', '40123789', '1940-12-37'),
-(4, 'Luca', 'Giordano', '32456789', '1932-45-67'),
-(5, 'Bruno', 'Godoy', '36789123', '1936-78-91'),
-(6, 'Agustin', 'Gomez', '33567890', '1933-56-78'),
-(7, 'Brian', 'Gonzalez', '35678901', '1935-67-89'),
-(8, 'Federico', 'Guigou Scottini', '37890123', '1937-89-01'),
-(9, 'Luna', 'Marrano', '38901234', '1938-90-12'),
-(10, 'Giuliana', 'Mercado Aviles', '33345678', '1933-34-56'),
-(11, 'Lucila', 'Mercado Ruiz', '32567890', '1932-56-78'),
-(12, 'Angel', 'Murillo', '34890123', '1934-89-01'),
-(13, 'Juan', 'Nissero', '36123456', '1936-12-34'),
-(14, 'Fausto', 'Parada', '35234567', '1935-23-45'),
-(15, 'Ignacio', 'Piter', '32789012', '1932-78-90'),
-(16, 'Tomas', 'Planchon', '40456789', '1940-45-67'),
-(17, 'Elisa', 'Ronconi', '31678123', '1931-67-81'),
-(18, 'Exequiel', 'Sanchez', '33234567', '1933-23-45'),
-(19, 'Melina', 'Schimpf Baldo', '33789456', '1933-78-94'),
-(20, 'Diego', 'Segovia', '34567890', '1934-56-78'),
-(21, 'Camila', 'Sittner', '36456789', '1936-45-67'),
-(22, 'Yamil', 'Villa', '35345678', '1935-34-56');
+(1, 'Valentino', 'Andrade', '35123456', '1935-12-03'),
+(2, 'Lucas', 'Cedres', '34876543', '1934-08-25'),
+(3, 'Facundo', 'Figun', '40123789', '1940-06-15'),
+(4, 'Luca', 'Giordano', '32456789', '1932-11-02'),
+(5, 'Bruno', 'Godoy', '36789123', '1936-07-14'),
+(6, 'Agustin', 'Gomez', '33567890', '1933-09-20'),
+(7, 'Brian', 'Gonzalez', '35678901', '1935-04-10'),
+(8, 'Federico', 'Guigou Scottini', '37890123', '1937-02-12'),
+(9, 'Luna', 'Marrano', '38901234', '1938-10-09'),
+(10, 'Giuliana', 'Mercado Aviles', '33345678', '1933-03-25'),
+(11, 'Lucila', 'Mercado Ruiz', '32567890', '1932-12-14'),
+(12, 'Angel', 'Murillo', '34890123', '1934-09-05'),
+(13, 'Juan', 'Nissero', '36123456', '1936-12-11'),
+(14, 'Fausto', 'Parada', '35234567', '1935-01-23'),
+(15, 'Ignacio', 'Piter', '32789012', '1932-06-07'),
+(16, 'Tomas', 'Planchon', '40456789', '1940-05-19'),
+(17, 'Elisa', 'Ronconi', '31678123', '1931-07-15'),
+(18, 'Exequiel', 'Sanchez', '33234567', '1933-08-21'),
+(19, 'Melina', 'Schimpf Baldo', '33789456', '1933-04-17'),
+(20, 'Diego', 'Segovia', '34567890', '1934-05-06'),
+(21, 'Camila', 'Sittner', '36456789', '1936-02-01'),
+(22, 'Yamil', 'Villa', '35345678', '1935-10-30');
 
 -- --------------------------------------------------------
 

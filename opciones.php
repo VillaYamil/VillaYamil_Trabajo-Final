@@ -41,7 +41,7 @@ if ($alumnoCumple){
         <a href="asistencia/seleccionar_materia.php">Muestra Asistencia Materia</a>
         <a href="notas/formulario_notas.php">Formulario de Notas</a>
         <a href="notas/ver_estado.php">Ver Estado Alumno</a>
-        <a href="materia/form_ABM_materia.php">Opciones para Materia</a>
+        <a href="materia/form_ABM_materia.php">ABM Materia</a>
         
     </div>
 </body>
