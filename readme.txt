@@ -35,6 +35,10 @@ Este sistema te permite gestionar las asistencias de los alumnos, registrar nota
    - Desde esta sección puedes gestionar alumnos.
    - Puedes **agregar** nuevos alumnos, editar datos de un alumno existente, o eliminar un alumno.
 
+8. **Criterios**
+   - Desde esta sección puedes seleccionar ver criterios de evaluacion para promocionar, regularizar o  quedar libre.
+   - Tambien se pude modificar los criterios de evaluacion para promocionar, regularizar o  quedar libre.
+
 ### Creación y Configuración de la Base de Datos
 
 1. **Crear la Base de Datos**
