@@ -31,7 +31,7 @@
         } else {
             // Crear la nueva materia
             $materia->nombre = $nombre;
-            if ($materia->create()) {
+            if ($materia->createMateria()) {
                 echo "<div class='success'>Materia creada con éxito.</div>";
             } else {
                 echo "<div class='error'>Error al crear la materia.</div>";
@@ -42,7 +42,7 @@
     if ($action === 'update' && $id) {
         // Acción de actualización
         $materia->nombre = $nombre;
-        if ($materia->update($id)) {
+        if ($materia->updateMateria($id)) {
             echo "<div class='success'>Materia actualizada con éxito.</div>";
         } else {
             echo "<div class='error'>Error al actualizar la materia.</div>";
@@ -52,7 +52,7 @@
     if ($action === 'delete' && $id) {
         if (isset($_GET['action']) && $_GET['action'] == 'delete_confirmed') {
             // Confirmación de eliminación
-            if ($materia->delete($id)) {
+            if ($materia->deleteMateria($id)) {
                 echo "<div class='success'>Materia eliminada correctamente.</div>";
             } else {
                 echo "<div class='error'>Ocurrió un error al intentar eliminar la materia.</div>";
@@ -65,7 +65,7 @@
                 echo "<a href='../opciones.php'>No, regresar</a>";
             } else {
                 // Si no tiene asistencias asociadas, eliminar directamente
-                if ($materia->delete($id)) {
+                if ($materia->deleteMateria($id)) {
                     echo "<div class='success'>Materia eliminada correctamente.</div>";
                 } else {
                     echo "<div class='error'>Ocurrió un error al eliminar la materia.</div>";

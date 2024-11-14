@@ -21,7 +21,7 @@ require_once 'Materia.php';
 
 // Crear instancia de Materia y obtener todas las materias
 $materia = new Materia($conn);
-$materias = $materia->getAll();
+$materias = $materia->getAllMaterias();
 ?>
 
 <!DOCTYPE html>

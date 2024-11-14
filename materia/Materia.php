@@ -12,14 +12,14 @@ class Materia {
         $this->conn = $conn;
     }
 
-    public function getAll() {
+    public function getAllMaterias() {
         $query = "SELECT id, nombre FROM materia";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     
-    public function create() {
+    public function createMateria() {
         try {
             $query = "INSERT INTO materia (nombre) VALUES (:nombre)";
             $stmt = $this->conn->prepare($query);
@@ -45,7 +45,7 @@ class Materia {
         return $count > 0;
     }
     
-    public function update($id) { //Modificar
+    public function updateMateria($id) { //Modificar
         $query = "UPDATE materia SET nombre = :nombre WHERE id = :id";
         $stmt = $this->conn->prepare($query);
         $this->nombre = htmlspecialchars(strip_tags($this->nombre));
@@ -64,7 +64,7 @@ class Materia {
     }
 
     // Método para eliminar una materia
-    public function delete($id) {
+    public function deleteMateria($id) {
         $query = "DELETE FROM materia WHERE id = :id";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);

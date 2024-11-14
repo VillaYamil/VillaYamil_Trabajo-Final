@@ -40,10 +40,11 @@ $alumnos = $alumno->getAll();
                 <?php endforeach; ?>
             </select>
 
-            <button type="submit" name="action" value="create">Crear</button>
-            <button type="submit" name="action" value="update">Actualizar</button>
+            <button type="submit" name="action" value="create">Crear</button>  
             <button type="submit" name="action" value="delete">Eliminar</button>
+            <button type="submit" name="action" value="update">Actualizar</button>
         </form>
+        <a href="../opciones.php">Opciones</a>
     </div>
 </body>
 </html>
