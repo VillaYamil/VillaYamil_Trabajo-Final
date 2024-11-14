@@ -60,7 +60,6 @@ class Alumno {
         }
     }
 
-    // Método para actualizar un alumno
     public function update($dni) {
         $query = "UPDATE " . $this->table . " SET nombre = :nombre, apellido = :apellido, fecha_nacimiento = :fecha_nacimiento WHERE dni = :dni";
         $stmt = $this->conn->prepare($query);
@@ -83,7 +82,6 @@ class Alumno {
         }
     }
 
-    // Método para eliminar un alumno
     public function delete($dni) {
         $query = "DELETE FROM " . $this->table . " WHERE dni = :dni";
         $stmt = $this->conn->prepare($query);

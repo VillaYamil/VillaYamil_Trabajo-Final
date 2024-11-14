@@ -26,15 +26,16 @@ class Materia {
             $this->nombre = htmlspecialchars(strip_tags($this->nombre));
             $stmt->bindParam(':nombre', $this->nombre);
             $stmt->execute();
+            return true;  // Esto indica que la materia fue creada correctamente.
         } catch (PDOException $e) {
             if ($e->getCode() == 23000) {  // Error de clave duplicada
-                return "Error: Ya existe una materia con ese nombre."; //cambio por return el echo
+                return "Error: Ya existe una materia con ese nombre.";
             } else {
-                return "Error: " . $e->getMessage(); //cambio por return el echo
+                return "Error: " . $e->getMessage();
             }
-            return false;
         }
     }
+    
 
     public function exists($nombre) {
         $stmt = $this->conn->prepare("SELECT COUNT(*) FROM materia WHERE nombre = :nombre");

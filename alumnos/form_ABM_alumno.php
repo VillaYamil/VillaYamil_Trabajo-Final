@@ -1,8 +1,8 @@
-<?php
+<?php 
 require_once '../conexion.php';
 require_once 'Alumno.php';
 
-// Obtener alumnos
+// Obtener todos los alumnos para la opción de selección
 $alumno = new Alumno($conn);
 $alumnos = $alumno->getAll();
 ?>

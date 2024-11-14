@@ -13,8 +13,8 @@
     
     <?php
     // Tu código PHP aquí
-    require_once '../conexion.php'; // Archivo con la conexión a la base de datos
-    require_once 'Materia.php'; // Archivo con la clase Materia
+    require_once '../conexion.php';
+    require_once 'Materia.php';
 
     // Crear instancia de la clase Materia
     $materia = new Materia($conn);
@@ -74,10 +74,10 @@
         }
     }
     ?>
-
+<a href="../opciones.php">Opciones</a>
 </div>
 
 </body>
 </html>
 
-<a href="../opciones.php">Opciones</a>
+
