@@ -97,6 +97,7 @@
 </head>
 <body>
    <form action="Procesar_login.php" method="POST">
+    <h1>Sistema de Asistencias</h1>
     <h2>Login</h2>
     <div>
         <label for="nombre">Nombre
