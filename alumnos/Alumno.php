@@ -22,7 +22,7 @@ class Alumno {
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-    
+
     public function existeDni($dni) {
         $query = "SELECT COUNT(*) FROM " . $this->table . " WHERE dni = :dni";
         $stmt = $this->conn->prepare($query);
