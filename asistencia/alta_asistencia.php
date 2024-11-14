@@ -1,14 +1,23 @@
 <?php
 require_once '../conexion.php';
+require_once '../materia/Materia.php';
+require_once '../alumnos/Alumno.php';
 // Obtener materias
-$sqlMaterias = "SELECT id, nombre FROM materia";
-$stmtMaterias = $conn->query($sqlMaterias);
-$materias = $stmtMaterias->fetchAll(PDO::FETCH_ASSOC);
+// $sqlMaterias = "SELECT id, nombre FROM materia";
+// $stmtMaterias = $conn->query($sqlMaterias);
+// $materias = $stmtMaterias->fetchAll(PDO::FETCH_ASSOC);
+$materia = new Materia($conn);
 
+$materias = $materia -> getAllMaterias();
+
+
+$alumno = new Alumno($conn);
+
+$alumnos = $alumno -> getAllAlumnos();
 // Obtener alumnos
-$sqlAlumnos = "SELECT id, nombre, apellido FROM alumno";
-$stmtAlumnos = $conn->query($sqlAlumnos);
-$alumnos = $stmtAlumnos->fetchAll(PDO::FETCH_ASSOC);
+// $sqlAlumnos = "SELECT id, nombre, apellido FROM alumno";
+// $stmtAlumnos = $conn->query($sqlAlumnos);
+// $alumnos = $stmtAlumnos->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>

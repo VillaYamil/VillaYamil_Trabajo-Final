@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar Notas</title>
-    <!-- Enlace al archivo CSS -->
-    <link rel="stylesheet" href="../css/notas/formulario_notas.css">
+    <link rel="stylesheet" href="notas_generales.css">
 </head>
 <body>
-
-<?php
+<div class="container">
+        <h2>Registrar Notas</h2>
+        <?php
 // Incluir la conexión a la base de datos
 require_once '../conexion.php';
 

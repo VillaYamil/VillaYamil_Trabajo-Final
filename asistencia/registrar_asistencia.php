@@ -4,20 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar Asistencia</title>
-    <!-- Link al archivo CSS -->
-    <link rel="stylesheet" href="../css/estilos_asistencia/registrar_asistencia.css">  <!-- Asegúrate de que esta ruta sea correcta -->
+    <link rel="stylesheet" href="../css/estilos_asistencia/registrar_asistencia.css"> 
 </head>
 <body>
 
 <?php
-// Conexión a la base de datos
-// try {
-//     $pdo = new PDO('mysql:host=localhost;dbname=tp_asistencias_v4', 'root', '');
-//     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-// } catch (PDOException $e) {
-//     echo "<div class='error'>Error de conexión: " . $e->getMessage() . "</div>";
-//     exit;
-// }
 require_once '../conexion.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

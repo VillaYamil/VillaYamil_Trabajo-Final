@@ -10,8 +10,7 @@
 
 <div class="container">
     <h1>Gestión de Alumnos</h1>
-
-    <!-- Aquí va el código PHP para manejar el ABM -->
+    
     <?php
     require_once '../conexion.php';
     require_once 'Alumno.php';

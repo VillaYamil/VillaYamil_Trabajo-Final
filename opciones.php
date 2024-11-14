@@ -38,6 +38,8 @@ if ($alumnoCumple) {
         <a href="notas/ver_estado.php">Ver Estado Alumno</a>
         <a href="materia/form_ABM_materia.php">ABM Materia</a>
         <a href="alumnos/form_ABM_alumno.php">ABM Alumno</a>
+        <a href="criterios/ver_criterios.php">Ver Criterios en la BD</a>
+        <a href="criterios/modificar_criterios.php">Modificar criterios de la BD</a>
     </div>
 </body>
 </html>

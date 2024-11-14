@@ -1,7 +1,7 @@
 /* estilo_opciones.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #ffffffec; /* Fondo en un suave tono pastel azul */
     margin: 0;
     padding: 0;
 }
@@ -16,27 +16,32 @@ a {
     display: block;
     text-align: center;
     margin: 10px 0;
-    padding: 10px;
-    background-color: #007bff;
+    padding: 12px 25px;
+    background-color: #14101086; /* Botón con color coral */
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    width: 200px;
+    border-radius: 50px; /* Bordes redondeados para un estilo más único */
+    width: auto;
     margin-left: auto;
     margin-right: auto;
-    transition: background-color 0.3s;
+    font-size: 16px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar los botones */
+    transition: background-color 0.3s, transform 0.3s; /* Efectos de transición */
 }
 
 a:hover {
-    background-color: #0056b3;
+    background-color: #ff4b39; /* Color más intenso al pasar el ratón */
+    transform: translateY(-4px); /* Sutil efecto de elevación al pasar el ratón */
 }
 
 a:active {
-    background-color: #004085;
+    background-color: #e53e3e; /* Fondo al hacer clic */
+    transform: translateY(2px); /* Desplazamiento hacia abajo cuando se hace clic */
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    text-align: center;
 }
