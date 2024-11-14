@@ -16,7 +16,7 @@ class Alumno {
         $this->conn = $conn;
     }
 
-    public function getAll() {
+    public function getAllAlumnos() {
         $query = "SELECT id, nombre, apellido, dni, fecha_nacimiento FROM alumno";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
@@ -31,7 +31,7 @@ class Alumno {
         return $stmt->fetchColumn() > 0;
     }
 
-    public function create() {
+    public function createAlumno() {
         if ($this->existeDni($this->dni)) {
             echo "Error: Ya existe un alumno con este DNI.";
             return false;
@@ -60,7 +60,7 @@ class Alumno {
         }
     }
 
-    public function update($dni) {
+    public function updateAlumno($dni) {
         $query = "UPDATE " . $this->table . " SET nombre = :nombre, apellido = :apellido, fecha_nacimiento = :fecha_nacimiento WHERE dni = :dni";
         $stmt = $this->conn->prepare($query);
 
@@ -82,7 +82,7 @@ class Alumno {
         }
     }
 
-    public function delete($dni) {
+    public function deleteAlumno($dni) {
         $query = "DELETE FROM " . $this->table . " WHERE dni = :dni";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':dni', $dni);

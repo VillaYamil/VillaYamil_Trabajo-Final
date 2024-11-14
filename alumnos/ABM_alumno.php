@@ -33,7 +33,7 @@
         $alumno->dni = $dni_nuevo;
         $alumno->fecha_nacimiento = $fecha_nacimiento;
 
-        if ($alumno->create()) {
+        if ($alumno->createAlumno()) {
             echo "<div class='success_alumno'>Alumno creado con éxito.</div>";
         } else {
             echo "<div class='error_alumno'>Error al crear el alumno.</div>";
@@ -46,7 +46,7 @@
         $alumno->apellido = $apellido;
         $alumno->fecha_nacimiento = $fecha_nacimiento;
 
-        if ($alumno->update($dni_existente)) {
+        if ($alumno->updateAlumno($dni_existente)) {
             echo "<div class='success_alumno'>Alumno actualizado con éxito.</div>";
         } else {
             echo "<div class='error_alumno'>Error al actualizar el alumno.</div>";
@@ -54,7 +54,7 @@
     }
 
     if ($action === 'delete' && $dni_existente) {
-        if ($alumno->delete($dni_existente)) {
+        if ($alumno->deleteAlumno($dni_existente)) {
             echo "<div class='success_alumno'>Alumno eliminado correctamente.</div>";
         } else {
             echo "<div class='error_alumno'>Ocurrió un error al eliminar el alumno.</div>";

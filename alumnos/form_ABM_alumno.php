@@ -4,7 +4,7 @@ require_once 'Alumno.php';
 
 // Obtener todos los alumnos para la opción de selección
 $alumno = new Alumno($conn);
-$alumnos = $alumno->getAll();
+$alumnos = $alumno->getAllAlumnos();
 ?>
 
 <!DOCTYPE html>

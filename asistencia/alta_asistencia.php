@@ -1,12 +1,4 @@
 <?php
-// Conexión a la base de datos
-// try {
-//     $conn = new PDO('mysql:host=localhost;dbname=tp_asistencias_v4', 'root', '');
-//     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-// } catch (PDOException $e) {
-//     echo "Error de conexión: " . $e->getMessage();
-//     exit;
-// }
 require_once '../conexion.php';
 // Obtener materias
 $sqlMaterias = "SELECT id, nombre FROM materia";

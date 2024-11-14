@@ -61,7 +61,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <label for="nota3">Nota 3:</label>
     <input type="number" name="nota3" id="nota3" min="0" max="10" required>
 
-    <button type="submit">Guardar Notas</button>
+    <button type="submit">Guardar Notas</button><br><br>
+    <a href="../opciones.php">Opciones</a>
 </form>
 
 </body>

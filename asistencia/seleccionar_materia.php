@@ -1,12 +1,4 @@
 <?php
-// Conexión a la base de datos
-// try {
-//     $conn = new PDO('mysql:host=localhost;dbname=tp_asistencias_v4', 'root', '');
-//     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-// } catch (PDOException $e) {
-//     echo "Error de conexión: " . $e->getMessage();
-//     exit;
-// }
 
 require_once '../conexion.php';
 
@@ -39,7 +31,8 @@ $materias = $stmtMaterias->fetchAll(PDO::FETCH_ASSOC);
             <?php endforeach; ?>
         </select>
         <br>
-        <input type="submit" value="Ver Asistencias">
+        <input type="submit" value="Ver Asistencias"><br><br>
+        <a href="../opciones.php">Opciones</a>
     </form>
 </body>
 </html>
