@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABM Materia</title>
-    <!--<link rel="stylesheet" href="generales_alumno.css">-->
+    <title>ABM Alumno</title>
+    <link rel="stylesheet" href="generales_alumnos.css">
 </head>
 <body>
 
@@ -12,7 +12,6 @@
     <h1>Gestión de Alumnos</h1>
     
     <?php
- 
     require_once '../conexion.php';
     require_once 'Alumno.php';
 
@@ -23,7 +22,6 @@
     $nombre = $_POST['nombre'] ?? '';
     $apellido = $_POST['apellido'] ?? '';
     $fecha_nacimiento = $_POST['fecha_nacimiento'] ?? '';
-
     $dni_nuevo = $_POST['dni'] ?? '';
     $dni_existente = $_POST['dni_existente'] ?? '';
 
@@ -35,9 +33,9 @@
         $alumno->fecha_nacimiento = $fecha_nacimiento;
 
         if ($alumno->create()) {
-            echo "<div class='success'>Alumno creado con éxito.</div>";
+            echo "<div class='success_alumno'>Alumno creado con éxito.</div>";
         } else {
-            echo "<div class='error'>Error al crear el alumno.</div>";
+            echo "<div class='error_alumno'>Error al crear el alumno.</div>";
         }
     }
 
@@ -58,11 +56,11 @@
             echo "<div class='error'>Ocurrió un error al eliminar el alumno.</div>";
         }
     }
-?>
-
+    ?>
+<a href="../opciones.php">Opciones</a>
 </div>
+
+
 
 </body>
 </html>
-
-<a href="../opciones.php">Opciones</a>
